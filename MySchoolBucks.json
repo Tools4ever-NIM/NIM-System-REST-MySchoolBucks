@@ -1,31 +1,6 @@
 {
     "schema": {
         "crud_objects": {
-            "Districts": {
-                "operations": {
-                    "DistrictsList": {
-                        "method": "get",
-                        "call": {
-                            "path": "v1/districts"
-                        },
-                        "processing_options": {
-                            "output_field": "items"
-                        }
-                    }
-                },
-                "key": "clientID",
-                "resources": {
-                    "clientID": "string*",
-                    "name": "string*",
-                    "region": "string*",
-                    "zip": "string*",
-                    "status": "string*",
-                    "housekeepingGroupID": "string*",
-                    "isDemo": "boolean*",
-                    "enableRegistration": "boolean*",
-                    "logoImageSrc": "string*"
-                }
-            },
             "Departments": {
                 "operations": {
                     "DepartmentsList": {
@@ -77,6 +52,68 @@
                     "status": "string*",
                     "allStores": "boolean*",
                     "attachedStoreIDs": "string*"
+                }
+            },
+            "Invoices": {
+                "operations": {
+                    "InvoicesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "v1/{district_id}/providers/invoices_prov/invoices"
+                        },
+                        "processing_options": {
+                            "output_field": "items"
+                        }
+                    }
+                },
+                "key": "invoiceID",
+                "resources": {
+                    "invoiceID": "string*",
+                    "invoiceUrl": "string*",
+                    "invoiceDate": "string*",
+                    "lastModifiedDate": "string*",
+                    "invoiceStatus": "string*",
+                    "invoiceStatusMessage": "string*",
+                    "startDate": "string*",
+                    "endDate": "string*",
+                    "additionalEmail": "string*",
+                    "overrideEmail": "string*",
+                    "emailNotificationSent": "boolean*",
+                    "allowPartialPayments": "boolean*",
+                    "paymentScheduleID": "string*",
+                    "lateFeeEnabled": "boolean*",
+                    "lateFeeID": "string*",
+                    "lateFeeName": "string*",
+                    "lateFeeAmount": "string*",
+                    "lateFeeGracePeriod": "string*",
+                    "lateFeeInSeparateInvoice": "boolean*",
+                    "invoiceItems": [
+                        {
+                            "studentID": "string*",
+                            "studentNumber": "string*",
+                            "studentFirstName": "string*",
+                            "studentLastName": "string*",
+                            "invoiceItemPrice": "string*",
+                            "invoiceItemTotalPayments": "string*",
+                            "invoiceItemPaymentCount": "string*",
+                            "feeID": "string*",
+                            "feeName": "string*",
+                            "feeType": "string*",
+                            "reference": "string*",
+                            "status": "string*",
+                            "statusMessage": "string*",
+                            "createdDate": "string*",
+                            "processedDate": "string*",
+                            "allowPartialPayments": "boolean*",
+                            "paymentMethodID": "string*",
+                            "isPaidInFull": "boolean*",
+                            "invoiceItemRemainingAmount": "string*"
+                        }
+                    ],
+                    "developerSubscriptionID": "string*",
+                    "attachedUserIds": "string*",
+                    "invoiceRemainingAmount": "string*",
+                    "invoiceTotalAmount": "string*"
                 }
             },
             "Providers": {
