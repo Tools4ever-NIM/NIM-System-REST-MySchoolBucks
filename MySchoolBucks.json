@@ -1,0 +1,249 @@
+{
+    "schema": {
+        "crud_objects": {
+            "Districts": {
+                "operations": {
+                    "DistrictsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "v1/districts"
+                        },
+                        "processing_options": {
+                            "output_field": "items"
+                        }
+                    }
+                },
+                "key": "clientID",
+                "resources": {
+                    "clientID": "string*",
+                    "name": "string*",
+                    "region": "string*",
+                    "zip": "string*",
+                    "status": "string*",
+                    "housekeepingGroupID": "string*",
+                    "isDemo": "boolean*",
+                    "enableRegistration": "boolean*",
+                    "logoImageSrc": "string*"
+                }
+            },
+            "Departments": {
+                "operations": {
+                    "DepartmentsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "v1/{district_id}/departments"
+                        },
+                        "processing_options": {
+                            "output_field": "items"
+                        }
+                    }
+                },
+                "key": "clientID",
+                "resources": {
+                    "clientID": "string*",
+                    "departmentID": "string*",
+                    "name": "string*",
+                    "status": "string*",
+                    "emailAddress": "string*",
+                    "contactPhone": "string*",
+                    "dailyStatusEmail": "string*"
+                }
+            },
+            "GLAccounts": {
+                "operations": {
+                    "GLAccountsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "v1/{district_id}/glAccounts"
+                        },
+                        "processing_options": {
+                            "output_field": "items"
+                        }
+                    }
+                },
+                "key": "glAcctID",
+                "resources": {
+                    "glAcctRef": "string*",
+                    "glAcctID": "string*",
+                    "clientID": "string*",
+                    "providerID": "string*",
+                    "name": "string*",
+                    "glAcctType": "string*",
+                    "code": "string*",
+                    "journalCode": "string*",
+                    "bankCode": "string*",
+                    "reference": "string*",
+                    "comment": "string*",
+                    "status": "string*",
+                    "allStores": "boolean*",
+                    "attachedStoreIDs": "string*"
+                }
+            },
+            "Providers": {
+                "operations": {
+                    "ProvidersList": {
+                        "method": "get",
+                        "call": {
+                            "path": "v1/{district_id}/providers"
+                        },
+                        "processing_options": {
+                            "output_field": "items"
+                        }
+                    }
+                },
+                "key": "providerID",
+                "resources": {
+                    "providerID": "string*",
+                    "name": "string*",
+                    "status": "string*",
+                    "lastTxnDownload": "string*",
+                    "invoiceOnOrAfter": "string*",
+                    "clientID": "string*",
+                    "providerAppName": "string*",
+                    "studentProviderID": "string*",
+                    "invoiceTemplateID": "string*"
+                }
+            },
+            "Schools": {
+                "operations": {
+                    "SchoolsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "v1/{district_id}/schools"
+                        },
+                        "processing_options": {
+                            "output_field": "items"
+                        }
+                    }
+                },
+                "key": "schoolID",
+                "resources": {
+                    "schoolID": "string*",
+                    "schoolNumber": "string*",
+                    "name": "string*",
+                    "streetLine1": "string*",
+                    "streetLine2": "string*",
+                    "city": "string*",
+                    "region": "string*",
+                    "zip": "string*",
+                    "contactName": "string*",
+                    "contactPhone": "string*",
+                    "emailAddress": "string*",
+                    "schoolMenuLink": "string*",
+                    "status": "string*",
+                    "clientID": "string*",
+                    "providerID": "string*",
+                    "color": "string*",
+                    "logoImageSrc": "string*",
+                    "state": "string*",
+                    "country": "string*"
+                }
+            }
+        }
+    },
+    "rest": {
+        "config": {
+            "baseUrl": "https://{tenant_id}/api/",
+            "get": {
+                "pagination": {
+                    "mode": "generic",
+                    "zero_based": false,
+                    "totalAttribute": "paging.total",
+                    "params": {
+                        "page": "{page_number}",
+                        "rowCount": "{page_size}"
+                    }
+                }
+            },
+            "authentication": "aeries",
+            "call_handling": "generic",
+            "test_connection": {
+                "url": "v1/districts"
+            },
+            "socket_timeout": 3600000,
+            "accept": "application/json",
+            "retry": [
+                {
+                    "type": "statusCode",
+                    "statusCode": 429,
+                    "retry": {
+                        "type": "simple",
+                        "maxCount": 12,
+                        "waitTime": 60
+                    }
+                },
+                {
+                    "type": "statusCode",
+                    "statusCode": 500,
+                    "retry": {
+                        "type": "simple",
+                        "maxCount": 12,
+                        "waitTime": 60
+                    }
+                },
+                {
+                    "type": "connectionError"
+                }
+            ],
+            "headers": {
+                "AppAuthorization": "{client_id}:{client_secret}"
+            }
+        }
+    },
+    "connection": {
+        "items": [
+            {
+                "name": "tenant_id",
+                "type": "textbox",
+                "label": "Tenent URL:",
+                "value": "www.myschoolbucks.com",
+                "required": true,
+                "order": 1
+            },
+            {
+                "name": "district_id",
+                "type": "textbox",
+                "label": "District ID",
+                "required": true,
+                "order": 3
+            },
+            {
+                "name": "client_id",
+                "type": "textbox",
+                "label": "Developer Account ID",
+                "required": true,
+                "order": 4
+            },
+            {
+                "name": "client_secret",
+                "type": "textbox",
+                "label": "API Key",
+                "required": true,
+                "order": 5
+            },
+            {
+                "name": "user_name",
+                "type": "textbox",
+                "label": "Username",
+                "required": true,
+                "order": 6
+            },
+            {
+                "name": "password",
+                "type": "textbox",
+                "label": "Password",
+                "required": true,
+                "password": true,
+                "order": 7
+            },
+            {
+                "name": "page_size",
+                "type": "textbox",
+                "label": "Page Size",
+                "required": true,
+                "value": "100",
+                "order": 8
+            }
+        ]
+    }
+}
