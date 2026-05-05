@@ -64,11 +64,36 @@
                         "processing_options": {
                             "output_field": "items"
                         }
+                    },
+                    "InvoicesCreate": {
+                        "method": "post",
+                        "call": {
+                            "path": "v1/{district_id}/providers/invoices_prov/invoices"
+                        },
+                        "body":{
+                            "items": [
+                                {
+                                    "_nim_merge_attributes_": true
+                                }
+                            ]
+                        },
+                        "processing_options": {
+                            "output_field": "items"
+                        },
+                        "resource_mandatory": [
+                            "invoiceID",
+                            "invoiceDate",
+                            "invoiceItems"
+                        ]
                     }
                 },
                 "key": "invoiceID",
                 "resources": {
                     "invoiceID": "string*",
+                    "clientID": "string*",
+                    "storeID": "string*",
+                    "departmentID": "string*",
+                    "providerID": "string*",
                     "invoiceUrl": "string*",
                     "invoiceDate": "string*",
                     "lastModifiedDate": "string*",
@@ -87,6 +112,11 @@
                     "lateFeeAmount": "string*",
                     "lateFeeGracePeriod": "string*",
                     "lateFeeInSeparateInvoice": "boolean*",
+                    "lateFeeGLAcctID": "string*",
+                    "lateFeeGLCashAcctID": "string*",
+                    "lateFeeGLSalesTaxAcctID": "string*",
+                    "lateFeeGLSegment": "string*",
+                    "paymentDatesStrings": "string*",
                     "invoiceItems": [
                         {
                             "studentID": "string*",
@@ -107,13 +137,103 @@
                             "allowPartialPayments": "boolean*",
                             "paymentMethodID": "string*",
                             "isPaidInFull": "boolean*",
-                            "invoiceItemRemainingAmount": "string*"
+                            "invoiceItemRemainingAmount": "string*",
+                            "glcashAcctID": "string*",
+                            "glsalesTaxAcctID": "string*",
+                            "glacctID": "string*",
+                            "glSegment": "string*",
+                            "glexpenditureAcctID": "string*",
+                            "sortOrder": "string*"
+                        }
+                    ],
+                    "reminders": [
+                        {
+                            "invoiceID": "string*",
+                            "invoiceReminderType": "string*",
+                            "daysCount": "string*",
+                            "lastRemindedDate": "string*"
                         }
                     ],
                     "developerSubscriptionID": "string*",
                     "attachedUserIds": "string*",
                     "invoiceRemainingAmount": "string*",
                     "invoiceTotalAmount": "string*"
+                }
+            },
+            "PaymentMethods": {
+                "operations": {
+                    "PaymentMethodsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "v1/{district_id}/paymentMethods"
+                        },
+                        "processing_options": {
+                            "output_field": "items"
+                        }
+                    }
+                },
+                "key": "paymentMethodID",
+                "resources": {
+                    "paymentMethodID": "string*",
+                    "clientID": "string*",
+                    "name": "string*",
+                    "status": "string*",
+                    "modules": "string*",
+                    "visaGatewayID": "string*",
+                    "mastercardGatewayID": "string*",
+                    "amexGatewayID": "string*",
+                    "discoverGatewayID": "string*",
+                    "walletGatewayID": "string*",
+                    "subscriberVisaGatewayID": "string*",
+                    "subscriberMastercardGatewayID": "string*",
+                    "subscriberAmexGatewayID": "string*",
+                    "subscriberDiscoverGatewayID": "string*",
+                    "subscriberWalletGatewayID": "string*",
+                    "subscriberECheckGatewayID": "string*",
+                    "cardPresentVisaGatewayID": "string*",
+                    "cardPresentMastercardGatewayID": "string*",
+                    "cardPresentAmexGatewayID": "string*",
+                    "cardPresentDiscoverGatewayID": "string*",
+                    "cardPresentWalletGatewayID": "string*",
+                    "cardPresentCashGatewayID": "string*",
+                    "isSystemMethod": "boolean*",
+                    "lastModifiedDate": "string*",
+                    "echeckGatewayID": "string*"
+                }
+            },
+            "PaymentSchedules": {
+                "operations": {
+                    "PaymentSchedulesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "v1/{district_id}/paymentSchedules"
+                        },
+                        "processing_options": {
+                            "output_field": "items"
+                        }
+                    }
+                },
+                "key": "scheduleID",
+                "resources": {
+                    "clientID": "string*",
+                    "scheduleName": "string*",
+                    "scheduleID": "string*",
+                    "scheduleDescription": "string*",
+                    "isTemplate": "boolean*",
+                    "status": "string*",
+                    "scheduleType": "string*",
+                    "firstDate": "string*",
+                    "until": "string*",
+                    "lastDate": "string*",
+                    "maxPayments": "string*",
+                    "frequency": "string*",
+                    "lowBalanceAmt": "string*",
+                    "customDateList": [
+                        {
+                        "scheduleDate": "string*"
+                        }
+                    ],
+                    "attributes": "string*"
                 }
             },
             "Providers": {
@@ -175,6 +295,80 @@
                     "state": "string*",
                     "country": "string*"
                 }
+            },
+            "Stores": {
+                "operations": {
+                    "StoresList": {
+                        "method": "get",
+                        "call": {
+                            "path": "v1/{district_id}/stores"
+                        },
+                        "processing_options": {
+                            "output_field": "items"
+                        }
+                    }
+                },
+                "key": "storeID",
+                "resources": {
+                    "storeID": "string*",
+                    "clientID": "string*",
+                    "productBalanceAcctId": "string*",
+                    "productDepartmentId": "string*",
+                    "productPaymentMethodId": "string*",
+                    "productDisablePaymentMethod": "boolean*",
+                    "productGLSegment": "string*",
+                    "productGlAcctId": "string*",
+                    "productGlAcctRequired": "boolean*",
+                    "productGlCashAcctId": "string*",
+                    "productGlCashAcctRequired": "boolean*",
+                    "productGlTaxAcctId": "string*",
+                    "productGlTaxAcctRequired": "boolean*",
+                    "productGlExpenditureAcctId": "string*",
+                    "productGlExpenditureAcctRequired": "boolean*",
+                    "productGlSegmentRequired": "boolean*",
+                    "productDepartmentRequired": "boolean*",
+                    "invoiceProviderId": "string*",
+                    "invoiceDepartmentId": "string*",
+                    "invoicePaymentMethodId": "string*",
+                    "invoiceDisablePaymentMethod": "boolean*",
+                    "invoiceGLSegment": "string*",
+                    "invoiceAllowPartialPayments": "boolean*",
+                    "invoiceGlSegmentRequired": "boolean*",
+                    "invoiceGlTaxAcctId": "string*",
+                    "invoiceGlTaxAcctRequired": "boolean*",
+                    "invoiceGlExpenditureAcctId": "string*",
+                    "invoiceGlExpenditureAcctRequired": "boolean*",
+                    "invoiceGlCashAcctId": "string*",
+                    "invoiceGlCashAcctRequired": "boolean*",
+                    "invoiceGlAcctId": "string*",
+                    "invoiceGlAcctRequired": "boolean*",
+                    "invoiceDepartmentRequired": "boolean*",
+                    "name": "string*",
+                    "streetLine1": "string*",
+                    "streetLine2": "string*",
+                    "city": "string*",
+                    "region": "string*",
+                    "zip": "string*",
+                    "contactName": "string*",
+                    "contactPhone": "string*",
+                    "emailAddress": "string*",
+                    "glAcctSegment": "string*",
+                    "pickupMsg": "string*",
+                    "notifyNewOrder": "boolean*",
+                    "isSystemStore": "boolean*",
+                    "disablePaymentMethod": "boolean*",
+                    "splitOrderPolicy": "string*",
+                    "notifyReturnEmail": "string*",
+                    "notifyCancelDeclineEmail": "string*",
+                    "notifyProductCreatedEmail": "string*",
+                    "enableGuestCheckout": "boolean*",
+                    "salesTax": "string*",
+                    "status": "string*",
+                    "lastModifiedDate": "string*",
+                    "isDefaultInvoiceStore": "boolean*",
+                    "state": "string*",
+                    "country": "string*"
+                }
             }
         }
     },
@@ -192,7 +386,7 @@
                     }
                 }
             },
-            "authentication": "aeries",
+            "authentication": "basic_auth",
             "call_handling": "generic",
             "test_connection": {
                 "url": "v1/districts"
