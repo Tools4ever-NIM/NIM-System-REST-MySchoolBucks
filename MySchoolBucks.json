@@ -70,7 +70,7 @@
                         "call": {
                             "path": "v1/{district_id}/providers/invoices_prov/invoices"
                         },
-                        "body":{
+                        "body": {
                             "items": [
                                 {
                                     "_nim_merge_attributes_": true
@@ -230,7 +230,7 @@
                     "lowBalanceAmt": "string*",
                     "customDateList": [
                         {
-                        "scheduleDate": "string*"
+                            "scheduleDate": "string*"
                         }
                     ],
                     "attributes": "string*"
@@ -476,5 +476,2783 @@
                 "order": 8
             }
         ]
-    }
+    },
+    "config_scenarios": [
+        {
+            "name": "Default Configuration",
+            "description": "",
+            "version": "1.0",
+            "createTime": 1778011994407,
+            "modifyTime": 1778011994407,
+            "name_values": [
+                {
+                    "name": "client_id",
+                    "value": null
+                },
+                {
+                    "name": "client_secret",
+                    "value": null
+                },
+                {
+                    "name": "collections",
+                    "value": [
+                        "Departments",
+                        "GLAccounts",
+                        "Invoices",
+                        "Invoices_invoiceItems",
+                        "Invoices_reminders",
+                        "PaymentMethods",
+                        "PaymentSchedules",
+                        "PaymentSchedules_customDateList",
+                        "Providers",
+                        "Schools",
+                        "Stores"
+                    ]
+                },
+                {
+                    "name": "district_id",
+                    "value": null
+                },
+                {
+                    "name": "page_size",
+                    "value": null
+                },
+                {
+                    "name": "password",
+                    "value": null
+                },
+                {
+                    "name": "proxy_address",
+                    "value": null
+                },
+                {
+                    "name": "proxy_password",
+                    "value": null
+                },
+                {
+                    "name": "proxy_use_flag",
+                    "value": null
+                },
+                {
+                    "name": "proxy_use_username_password_flag",
+                    "value": null
+                },
+                {
+                    "name": "proxy_username",
+                    "value": null
+                },
+                {
+                    "name": "tenant_id",
+                    "value": null
+                },
+                {
+                    "name": "user_name",
+                    "value": null
+                },
+                {
+                    "name": "username",
+                    "value": "gchristian@d64.org"
+                }
+            ],
+            "collections": [
+                {
+                    "col_name": "Departments",
+                    "fields": [
+                        {
+                            "field_name": "clientID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "departmentID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "name",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "status",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "emailAddress",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "contactPhone",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "dailyStatusEmail",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        }
+                    ],
+                    "key": "departmentID",
+                    "display": "",
+                    "name_values": [
+                        {
+                            "name": "properties",
+                            "value": [
+                                "clientID",
+                                "departmentID",
+                                "name",
+                                "status",
+                                "emailAddress",
+                                "contactPhone",
+                                "dailyStatusEmail"
+                            ]
+                        }
+                    ],
+                    "sys_nn": [],
+                    "container": "",
+                    "source": "data"
+                },
+                {
+                    "col_name": "GLAccounts",
+                    "fields": [
+                        {
+                            "field_name": "glAcctID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "glAcctRef",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "clientID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "providerID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "name",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "glAcctType",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "code",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "journalCode",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "bankCode",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "reference",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "comment",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "status",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "allStores",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "attachedStoreIDs",
+                            "field_type": "string-array",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        }
+                    ],
+                    "key": "glAcctID",
+                    "display": "",
+                    "name_values": [
+                        {
+                            "name": "properties",
+                            "value": [
+                                "glAcctRef",
+                                "glAcctID",
+                                "clientID",
+                                "providerID",
+                                "name",
+                                "glAcctType",
+                                "code",
+                                "journalCode",
+                                "bankCode",
+                                "reference",
+                                "comment",
+                                "status",
+                                "allStores",
+                                "attachedStoreIDs"
+                            ]
+                        }
+                    ],
+                    "sys_nn": [],
+                    "container": "",
+                    "source": "data"
+                },
+                {
+                    "col_name": "Invoices",
+                    "fields": [
+                        {
+                            "field_name": "invoiceID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "clientID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "storeID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "departmentID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "providerID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceUrl",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceDate",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lastModifiedDate",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceStatus",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceStatusMessage",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "startDate",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "endDate",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "additionalEmail",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "overrideEmail",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "emailNotificationSent",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "allowPartialPayments",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "paymentScheduleID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lateFeeEnabled",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lateFeeID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lateFeeName",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lateFeeAmount",
+                            "field_type": "number",
+                            "include": true,
+                            "field_format": "12.34",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lateFeeGracePeriod",
+                            "field_type": "number",
+                            "include": true,
+                            "field_format": "12",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lateFeeInSeparateInvoice",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lateFeeGLAcctID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lateFeeGLCashAcctID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lateFeeGLSalesTaxAcctID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lateFeeGLSegment",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "paymentDatesStrings",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "developerSubscriptionID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "attachedUserIds",
+                            "field_type": "string-array",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceRemainingAmount",
+                            "field_type": "number",
+                            "include": true,
+                            "field_format": "12.34",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceTotalAmount",
+                            "field_type": "number",
+                            "include": true,
+                            "field_format": "12.34",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceItems",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "reminders",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        }
+                    ],
+                    "key": "invoiceID",
+                    "display": "",
+                    "name_values": [
+                        {
+                            "name": "properties",
+                            "value": [
+                                "invoiceID",
+                                "clientID",
+                                "storeID",
+                                "departmentID",
+                                "providerID",
+                                "invoiceUrl",
+                                "invoiceDate",
+                                "lastModifiedDate",
+                                "invoiceStatus",
+                                "invoiceStatusMessage",
+                                "startDate",
+                                "endDate",
+                                "additionalEmail",
+                                "overrideEmail",
+                                "emailNotificationSent",
+                                "allowPartialPayments",
+                                "paymentScheduleID",
+                                "lateFeeEnabled",
+                                "lateFeeID",
+                                "lateFeeName",
+                                "lateFeeAmount",
+                                "lateFeeGracePeriod",
+                                "lateFeeInSeparateInvoice",
+                                "lateFeeGLAcctID",
+                                "lateFeeGLCashAcctID",
+                                "lateFeeGLSalesTaxAcctID",
+                                "lateFeeGLSegment",
+                                "paymentDatesStrings",
+                                "developerSubscriptionID",
+                                "attachedUserIds",
+                                "invoiceRemainingAmount",
+                                "invoiceTotalAmount"
+                            ]
+                        }
+                    ],
+                    "sys_nn": [],
+                    "container": "",
+                    "source": "data"
+                },
+                {
+                    "col_name": "Invoices_invoiceItems",
+                    "fields": [
+                        {
+                            "field_name": "Invoices_invoiceID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [
+                                "Invoices"
+                            ],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "studentID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "studentNumber",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "studentFirstName",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "studentLastName",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceItemPrice",
+                            "field_type": "number",
+                            "include": true,
+                            "field_format": "12.34",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceItemTotalPayments",
+                            "field_type": "number",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceItemPaymentCount",
+                            "field_type": "number",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "feeID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "feeName",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "feeType",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "reference",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "status",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "statusMessage",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "createdDate",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "processedDate",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "allowPartialPayments",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "paymentMethodID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "isPaidInFull",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceItemRemainingAmount",
+                            "field_type": "number",
+                            "include": true,
+                            "field_format": "12.34",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "glcashAcctID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "glsalesTaxAcctID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "glacctID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "glSegment",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "glexpenditureAcctID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "sortOrder",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        }
+                    ],
+                    "key": "",
+                    "display": "",
+                    "name_values": [
+                        {
+                            "name": "properties",
+                            "value": [
+                                "studentID",
+                                "studentNumber",
+                                "studentFirstName",
+                                "studentLastName",
+                                "invoiceItemPrice",
+                                "invoiceItemTotalPayments",
+                                "invoiceItemPaymentCount",
+                                "feeID",
+                                "feeName",
+                                "feeType",
+                                "reference",
+                                "status",
+                                "statusMessage",
+                                "createdDate",
+                                "processedDate",
+                                "allowPartialPayments",
+                                "paymentMethodID",
+                                "isPaidInFull",
+                                "invoiceItemRemainingAmount",
+                                "glcashAcctID",
+                                "glsalesTaxAcctID",
+                                "glacctID",
+                                "glSegment",
+                                "glexpenditureAcctID",
+                                "sortOrder"
+                            ]
+                        }
+                    ],
+                    "sys_nn": [],
+                    "container": "",
+                    "source": "data"
+                },
+                {
+                    "col_name": "Invoices_reminders",
+                    "fields": [],
+                    "key": "",
+                    "display": "",
+                    "name_values": [
+                        {
+                            "name": "properties",
+                            "value": [
+                                "invoiceID",
+                                "invoiceReminderType",
+                                "daysCount",
+                                "lastRemindedDate"
+                            ]
+                        }
+                    ],
+                    "sys_nn": [],
+                    "container": "",
+                    "source": "data"
+                },
+                {
+                    "col_name": "Providers",
+                    "fields": [
+                        {
+                            "field_name": "providerID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "name",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "status",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lastTxnDownload",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceOnOrAfter",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "clientID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "providerAppName",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "studentProviderID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceTemplateID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        }
+                    ],
+                    "key": "providerID",
+                    "display": "",
+                    "name_values": [
+                        {
+                            "name": "properties",
+                            "value": [
+                                "providerID",
+                                "name",
+                                "status",
+                                "lastTxnDownload",
+                                "invoiceOnOrAfter",
+                                "clientID",
+                                "providerAppName",
+                                "studentProviderID",
+                                "invoiceTemplateID"
+                            ]
+                        }
+                    ],
+                    "sys_nn": [],
+                    "container": "",
+                    "source": "data"
+                },
+                {
+                    "col_name": "Schools",
+                    "fields": [
+                        {
+                            "field_name": "schoolID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "schoolNumber",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "name",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "streetLine1",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "streetLine2",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "city",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "region",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "zip",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "contactName",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "contactPhone",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "emailAddress",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "schoolMenuLink",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "status",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "clientID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "providerID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "color",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "logoImageSrc",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "state",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "country",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        }
+                    ],
+                    "key": "schoolID",
+                    "display": "",
+                    "name_values": [
+                        {
+                            "name": "properties",
+                            "value": [
+                                "schoolID",
+                                "schoolNumber",
+                                "name",
+                                "streetLine1",
+                                "streetLine2",
+                                "city",
+                                "region",
+                                "zip",
+                                "contactName",
+                                "contactPhone",
+                                "emailAddress",
+                                "schoolMenuLink",
+                                "status",
+                                "clientID",
+                                "providerID",
+                                "color",
+                                "logoImageSrc",
+                                "state",
+                                "country"
+                            ]
+                        }
+                    ],
+                    "sys_nn": [],
+                    "container": "",
+                    "source": "data"
+                },
+                {
+                    "col_name": "PaymentMethods",
+                    "fields": [
+                        {
+                            "field_name": "paymentMethodID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "clientID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "name",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "status",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "modules",
+                            "field_type": "string-array",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "visaGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "mastercardGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "amexGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "discoverGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "walletGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "subscriberVisaGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "subscriberMastercardGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "subscriberAmexGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "subscriberDiscoverGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "subscriberWalletGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "subscriberECheckGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "cardPresentVisaGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "cardPresentMastercardGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "cardPresentAmexGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "cardPresentDiscoverGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "cardPresentWalletGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "cardPresentCashGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "isSystemMethod",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lastModifiedDate",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "echeckGatewayID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        }
+                    ],
+                    "key": "paymentMethodID",
+                    "display": "",
+                    "name_values": [
+                        {
+                            "name": "properties",
+                            "value": [
+                                "paymentMethodID",
+                                "clientID",
+                                "name",
+                                "status",
+                                "modules",
+                                "visaGatewayID",
+                                "mastercardGatewayID",
+                                "amexGatewayID",
+                                "discoverGatewayID",
+                                "walletGatewayID",
+                                "subscriberVisaGatewayID",
+                                "subscriberMastercardGatewayID",
+                                "subscriberAmexGatewayID",
+                                "subscriberDiscoverGatewayID",
+                                "subscriberWalletGatewayID",
+                                "subscriberECheckGatewayID",
+                                "cardPresentVisaGatewayID",
+                                "cardPresentMastercardGatewayID",
+                                "cardPresentAmexGatewayID",
+                                "cardPresentDiscoverGatewayID",
+                                "cardPresentWalletGatewayID",
+                                "cardPresentCashGatewayID",
+                                "isSystemMethod",
+                                "lastModifiedDate",
+                                "echeckGatewayID"
+                            ]
+                        }
+                    ],
+                    "sys_nn": [],
+                    "container": "",
+                    "source": "data"
+                },
+                {
+                    "col_name": "PaymentSchedules",
+                    "fields": [
+                        {
+                            "field_name": "scheduleID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "clientID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "scheduleName",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "scheduleDescription",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "isTemplate",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "status",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "scheduleType",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "firstDate",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "until",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lastDate",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "maxPayments",
+                            "field_type": "number",
+                            "include": true,
+                            "field_format": "12",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "frequency",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lowBalanceAmt",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "attributes",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "customDateList",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        }
+                    ],
+                    "key": "scheduleID",
+                    "display": "",
+                    "name_values": [
+                        {
+                            "name": "properties",
+                            "value": [
+                                "clientID",
+                                "scheduleName",
+                                "scheduleID",
+                                "scheduleDescription",
+                                "isTemplate",
+                                "status",
+                                "scheduleType",
+                                "firstDate",
+                                "until",
+                                "lastDate",
+                                "maxPayments",
+                                "frequency",
+                                "lowBalanceAmt",
+                                "attributes"
+                            ]
+                        }
+                    ],
+                    "sys_nn": [],
+                    "container": "",
+                    "source": "data"
+                },
+                {
+                    "col_name": "PaymentSchedules_customDateList",
+                    "fields": [
+                        {
+                            "field_name": "PaymentSchedules_scheduleID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [
+                                "PaymentSchedules"
+                            ],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "scheduleDate",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        }
+                    ],
+                    "key": "",
+                    "display": "",
+                    "name_values": [
+                        {
+                            "name": "properties",
+                            "value": [
+                                "scheduleDate"
+                            ]
+                        }
+                    ],
+                    "sys_nn": [],
+                    "container": "",
+                    "source": "data"
+                },
+                {
+                    "col_name": "Stores",
+                    "fields": [
+                        {
+                            "field_name": "storeID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "clientID",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productBalanceAcctId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productDepartmentId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productPaymentMethodId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productDisablePaymentMethod",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productGLSegment",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productGlAcctId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productGlAcctRequired",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productGlCashAcctId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productGlCashAcctRequired",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productGlTaxAcctId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productGlTaxAcctRequired",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productGlExpenditureAcctId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productGlExpenditureAcctRequired",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productGlSegmentRequired",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "productDepartmentRequired",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceProviderId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceDepartmentId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoicePaymentMethodId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceDisablePaymentMethod",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceGLSegment",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceAllowPartialPayments",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceGlSegmentRequired",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceGlTaxAcctId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceGlTaxAcctRequired",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceGlExpenditureAcctId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceGlExpenditureAcctRequired",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceGlCashAcctId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceGlCashAcctRequired",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceGlAcctId",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceGlAcctRequired",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "invoiceDepartmentRequired",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "name",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "streetLine1",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "streetLine2",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "city",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "region",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "zip",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "contactName",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "contactPhone",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "emailAddress",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "glAcctSegment",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "pickupMsg",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "notifyNewOrder",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "isSystemStore",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "disablePaymentMethod",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "splitOrderPolicy",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "notifyReturnEmail",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "notifyCancelDeclineEmail",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "notifyProductCreatedEmail",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "enableGuestCheckout",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "salesTax",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "status",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "lastModifiedDate",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "isDefaultInvoiceStore",
+                            "field_type": "boolean",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "state",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        },
+                        {
+                            "field_name": "country",
+                            "field_type": "string",
+                            "include": true,
+                            "field_format": "",
+                            "field_source": "data",
+                            "javascript": "",
+                            "ref_col": [],
+                            "reference": false,
+                            "ref_col_fields": []
+                        }
+                    ],
+                    "key": "storeID",
+                    "display": "",
+                    "name_values": [
+                        {
+                            "name": "properties",
+                            "value": [
+                                "storeID",
+                                "clientID",
+                                "productBalanceAcctId",
+                                "productDepartmentId",
+                                "productPaymentMethodId",
+                                "productDisablePaymentMethod",
+                                "productGLSegment",
+                                "productGlAcctId",
+                                "productGlAcctRequired",
+                                "productGlCashAcctId",
+                                "productGlCashAcctRequired",
+                                "productGlTaxAcctId",
+                                "productGlTaxAcctRequired",
+                                "productGlExpenditureAcctId",
+                                "productGlExpenditureAcctRequired",
+                                "productGlSegmentRequired",
+                                "productDepartmentRequired",
+                                "invoiceProviderId",
+                                "invoiceDepartmentId",
+                                "invoicePaymentMethodId",
+                                "invoiceDisablePaymentMethod",
+                                "invoiceGLSegment",
+                                "invoiceAllowPartialPayments",
+                                "invoiceGlSegmentRequired",
+                                "invoiceGlTaxAcctId",
+                                "invoiceGlTaxAcctRequired",
+                                "invoiceGlExpenditureAcctId",
+                                "invoiceGlExpenditureAcctRequired",
+                                "invoiceGlCashAcctId",
+                                "invoiceGlCashAcctRequired",
+                                "invoiceGlAcctId",
+                                "invoiceGlAcctRequired",
+                                "invoiceDepartmentRequired",
+                                "name",
+                                "streetLine1",
+                                "streetLine2",
+                                "city",
+                                "region",
+                                "zip",
+                                "contactName",
+                                "contactPhone",
+                                "emailAddress",
+                                "glAcctSegment",
+                                "pickupMsg",
+                                "notifyNewOrder",
+                                "isSystemStore",
+                                "disablePaymentMethod",
+                                "splitOrderPolicy",
+                                "notifyReturnEmail",
+                                "notifyCancelDeclineEmail",
+                                "notifyProductCreatedEmail",
+                                "enableGuestCheckout",
+                                "salesTax",
+                                "status",
+                                "lastModifiedDate",
+                                "isDefaultInvoiceStore",
+                                "state",
+                                "country"
+                            ]
+                        }
+                    ],
+                    "sys_nn": [],
+                    "container": "",
+                    "source": "data"
+                }
+            ]
+        }
+    ]
 }
